@@ -15,3 +15,10 @@ def pretty_names():
             'quick' : 'Quick Sort',
             'insertion' : 'Insertion Sort',
             }
+
+def filenames():
+    return {
+            'bubble' : 'bubblesort.html',
+            'quick' : 'quicksort.html',
+            'insertion' : 'insertionsort.html'
+            }

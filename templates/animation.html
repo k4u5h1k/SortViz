@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SortViz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='assets/js/jquery-3.3.1.slim.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://kit.fontawesome.com/ab210669a6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid p-5">
+            <div class="row mb-4">
+            {% for filename in fileList %}
+                <div class="col-6">
+                    {% include filename %}
+                </div>
+                {% if loop.index%2 == 0 %}
+                    </div>
+                    <div class="row mb-4">
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+</body>
+</html>

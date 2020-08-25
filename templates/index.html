@@ -22,46 +22,34 @@
                     <div class="p-5 bg-white shadow rounded-lg">
                     <img src="{{ url_for('static', filename='assets/img/sortviz.png') }}" alt="" width="200" class="d-block mx-auto mb-2">
 		<form method = "POST" action='/animation' enctype = "multipart/form-data">
-                    <!-- Dropdown to select a style -->
+
+                    <!-- Array Size -->
                      <h6 class="text-center mb-2 text-muted">
                          Enter Array Size
                     </h6>
                     <input class="form-control" type="text" value="15" name="size">
 
                     <br>
+
                     <h6 class="text-center mb-2 text-muted">
                         Choose Algorithms
                     </h6>
 
                     <h6>
+                    {% for name in names %}
                     <div class="form-check">
-                        <input class="form-check-input" name="bubble" type="checkbox" id="gridCheck1">
+                        <input class="form-check-input" name={{ name }} type="checkbox" id="gridCheck1">
                         <label class="form-check-label" for="gridCheck1">
-                            Bubble Sort
+                            {{ names[name] }}
                         </label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" name="quick" type="checkbox" id="gridCheck1">
-                        <label class="form-check-label" for="gridCheck1">
-                            Quick Sort
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" name="insertion" type="checkbox" id="gridCheck1">
-                        <label class="form-check-label" for="gridCheck1">
-                            Insertion Sort
-                        </label>
-                    </div>
+                    {% endfor %}
                     </h6>
                     <br>
 
                     <!-- Submit Button -->
-                    <div class="columns download text-center">
-                        <!-- <a href="assets/doc/file.pdf" class="button submit btn btn-primary btn-block rounded-pill shadow" target="_blank"> -->
 				<button type="submit" class="btn btn-primary" >Go!</button>
 
-                        <!-- </a> -->
-                    </div>
 		</input>
         </form>
 
@@ -70,27 +58,6 @@
             </div>
         </div>
     </section>
-
-    <!-- <!-1- JS for Displaying Number for Slider -1-> -->
-    <!-- <script> -->
-    <!--     // Neatness Slider -->
-    <!--     var slider1 = document.getElementById("myRange1"); -->
-    <!--     var output1 = document.getElementById("demo1"); -->
-    <!--     output1.innerHTML = slider1.value; -->
-
-    <!--     slider1.oninput = function () { -->
-    <!--         output1.innerHTML = this.value; -->
-    <!--     } -->
-
-    <!--     // Stroke Width Slider -->
-    <!--     var slider2 = document.getElementById("myRange2"); -->
-    <!--     var output2 = document.getElementById("demo2"); -->
-    <!--     output2.innerHTML = slider2.value; -->
-
-    <!--     slider2.oninput = function () { -->
-    <!--         output2.innerHTML = this.value; -->
-    <!--     } -->
-    <!-- </script> -->
 </body>
 
 </html>

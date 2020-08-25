@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/',methods=['GET'])
 def sortviz():
-    return render_template('index.html')
+    return render_template('index.html',names = algorithms.pretty_names())
 
 
 @app.route('/animation',methods=['POST'])
@@ -21,13 +21,9 @@ def animation():
             'insertion' : 'insertionsort.html'
             }
 
-    function_names = {
-            'bubble' : algorithms.bubble_sort,
-            'quick' : algorithms.QuickSort,
-            'insertion' : algorithms.insertion_sort
-            }
-
     file_list=[]
+
+    function_names = algorithms.function_names()
 
     for algo in function_names:
         if request.form.get(algo) == 'on':

@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+import random
+import algorithms
 from flask import Flask
 from flask import render_template, request, redirect, url_for
-import algorithms
 app = Flask(__name__)
 
 @app.route('/',methods=['GET'])
@@ -11,23 +11,27 @@ def sortviz():
 
 @app.route('/animation',methods=['POST'])
 def animation():
-    file_dict = {
-            'quick' : 'quicksort.html',
+
+    array = list(range(1,int(request.form.get('size'))+1))
+    random.shuffle(array)
+
+    filenames = {
             'bubble' : 'bubblesort.html',
+            'quick' : 'quicksort.html',
             'insertion' : 'insertionsort.html'
             }
+
+    function_names = {
+            'bubble' : algorithms.bubble_sort,
+            'quick' : algorithms.QuickSort,
+            'insertion' : algorithms.insertion_sort
+            }
+
     file_list=[]
 
-    if request.form.get('quick') == 'on':
-        algorithms.QuickSort(file_dict['quick'])
-        file_list.append(file_dict['quick'])
-
-    if request.form.get('insertion') == 'on':
-        algorithms.insertion_sort(file_dict['insertion']);
-        file_list.append(file_dict['insertion'])
-
-    if request.form.get('bubble') == 'on':
-        algorithms.bubble_sort(file_dict['bubble']);
-        file_list.append(file_dict['bubble'])
+    for algo in function_names:
+        if request.form.get(algo) == 'on':
+            function_names[algo](array.copy(),filenames[algo])
+            file_list.append(filenames[algo])
 
     return render_template('animation.html',fileList=file_list)

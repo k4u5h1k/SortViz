@@ -1,12 +1,8 @@
 from grapher import Plotter
 import random
 
-def insertion_sort(filename):
+def insertion_sort(data, filename):
     test = Plotter("Insertion Sort")
-
-    #Just generating a random list
-    data = list(range(1,15))
-    random.shuffle(data)
 
     for i in range(len(data)):
         temp = data[i]
@@ -27,10 +23,9 @@ def insertion_sort(filename):
 
     test.animate(data,filename)
 
-def bubble_sort(filename):
+def bubble_sort(data, filename):
     test=Plotter("Bubble Sort")
-    data = list(range(1,15))
-    random.shuffle(data)
+
     for i in range(len(data)):
         for j in range(0,len(data)-i-1):
             test.plot(data,j+1,j)
@@ -40,10 +35,9 @@ def bubble_sort(filename):
     test.animate(data,filename)
 
 class QuickSort():
-    def __init__(self,filename):
+    def __init__(self,data, filename):
         self.test = Plotter("Quick Sort")
-        self.data = list(range(1,15))
-        random.shuffle(self.data)
+        self.data = data
         self.quickSort(0,len(self.data)-1)
         self.test.animate(self.data,filename)
 

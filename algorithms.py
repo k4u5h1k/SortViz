@@ -2,6 +2,8 @@ from algos.insertion_sort import insertion_sort
 from algos.bubble_sort import bubble_sort
 from algos.quick_sort import QuickSort
 
+#DOUBLE CHECK THAT THE KEYS ARE SAME IN ALL DICTS
+
 def function_names():
     return {
             'bubble' : bubble_sort,
@@ -13,7 +15,7 @@ def pretty_names():
     return {
             'bubble' :  'Bubble Sort',
             'quick' : 'Quick Sort',
-            'insertion' : 'Insertion Sort',
+            'insertion' : 'Insertion Sort'
             }
 
 def filenames():

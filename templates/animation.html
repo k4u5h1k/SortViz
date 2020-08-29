@@ -13,13 +13,13 @@
 
 <body>
     <section>
-        <div class="container-fluid p-5">
+        <div class="container p-3">
             <div class="row mb-4">
             {% for filename in fileList %}
                 <div class="col-6">
                     {% include filename %}
                 </div>
-                {% if loop.index%2 == 0 %}
+                {% if loop.index%2 == 0 and not loop.last %}
                     </div>
                     <div class="row mb-4">
                 {% endif %}

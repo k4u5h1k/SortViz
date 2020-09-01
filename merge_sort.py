@@ -6,6 +6,7 @@ class MergeSort():
         self.plotter = Plotter("Merge Sort")
         self.length = len(data)
         self.plotter.plot(data,0)
+        self.plotter.plot(data,0)
         self.plotter.animate(self.merge_sort(data,0),filename)
 
     def merge_lists(self,left_sublist,right_sublist,start):

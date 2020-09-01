@@ -16,15 +16,13 @@ def animation():
     array = list(range(1,int(request.form.get('size'))+1))
     random.shuffle(array)
 
-
-    file_list=[]
-
     function_names = algorithms.function_names()
     filenames = algorithms.filenames()
+    chosen=[]
 
     for algo in function_names:
         if request.form.get(algo) == 'on':
             function_names[algo](array.copy(),filenames[algo])
-            file_list.append(filenames[algo])
+            chosen.append(filenames[algo])
 
-    return render_template('animation.html',fileList=file_list,rand=random.randint(0,1000))
+    return render_template('animation.html',fileList=chosen,rand=random.randint(0,1000))

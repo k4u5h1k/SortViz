@@ -4,9 +4,12 @@ import random
 class MergeSort():
     def __init__(self,data,filename):
         self.plotter = Plotter("Merge Sort")
-        self.plotter.animate(self.merge_sort(data),filename)
+        self.length = len(data)
+        self.plotter.plot(data,0)
+        self.plotter.plot(data,0)
+        self.plotter.animate(self.merge_sort(data,0),filename)
 
-    def merge_lists(self,left_sublist,right_sublist):
+    def merge_lists(self,left_sublist,right_sublist,start):
             i,j = 0,0
             result = []
             while i<len(left_sublist) and j<len(right_sublist):
@@ -16,23 +19,18 @@ class MergeSort():
                     else:
                             result.append(right_sublist[j])
                             j += 1
-                    self.plotter.plot(result,len(result)-1)
+                    self.plotter.plot([0]*start+result+[0]*(self.length-start-len(result)),start+len(result)-1)
             result += left_sublist[i:]
-            self.plotter.plot(result,len(result)-1)
+            self.plotter.plot([0]*start+result+[0]*(self.length-start-len(result)),start+len(result)-1)
             result += right_sublist[j:]
-            self.plotter.plot(result,len(result)-1)
+            self.plotter.plot([0]*start+result+[0]*(self.length-start-len(result)),start+len(result)-1)
             return result
 
-    def merge_sort(self,input_list):
+    def merge_sort(self,input_list,start):
             if len(input_list) <= 1:
                     return input_list
             else:
                     midpoint = int(len(input_list)/2)
-                    left_sublist = self.merge_sort(input_list[:midpoint])
-                    right_sublist = self.merge_sort(input_list[midpoint:])
-                    return self.merge_lists(left_sublist,right_sublist)
-
-if __name__=="__main__":
-    MergeSort([3,1,2,5,10,2],"merge.html")
-
-
+                    left_sublist = self.merge_sort(input_list[:midpoint],start)
+                    right_sublist = self.merge_sort(input_list[midpoint:],start+midpoint)
+                    return self.merge_lists(left_sublist,right_sublist,start)

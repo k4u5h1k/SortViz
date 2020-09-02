@@ -6,6 +6,8 @@ from algos.count_sort import count_sort
 from algos.cocktail_sort import CocktailSort
 from algos.comb_sort import CombSort
 from algos.heap_sort import HeapSort
+from algos.cycle_sort import cycle_sort
+from algos.stooge_sort import StoogeSort
 
 #DOUBLE CHECK THAT THE KEYS ARE SAME IN ALL DICTS
 
@@ -18,7 +20,9 @@ def function_names():
             'count' : count_sort,
             'cocktail' : CocktailSort,
             'comb' : CombSort,
-            'heap' : HeapSort
+            'heap' : HeapSort,
+            'cycle' : cycle_sort,
+            'stooge' : StoogeSort
             }
 
 def pretty_names():
@@ -30,7 +34,9 @@ def pretty_names():
             'count' : 'Count Sort',
             'cocktail' : 'Cocktail Sort',
             'comb' : 'Comb Sort',
-            'heap' : 'Heap Sort'
+            'heap' : 'Heap Sort',
+            'cycle' : 'Cycle Sort',
+            'stooge' : 'Stooge Sort'
             }
 
 def filenames():
@@ -42,5 +48,7 @@ def filenames():
             'count' : 'countsort.html',
             'cocktail' : 'cocktailsort.html',
             'comb' : 'combsort.html',
-            'heap' : 'heapsort.html'
+            'heap' : 'heapsort.html',
+            'cycle' : 'cyclesort.html',
+            'stooge' : 'stoogesort.html'
             }

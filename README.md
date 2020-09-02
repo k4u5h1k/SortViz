@@ -10,8 +10,8 @@ You can add your own algorithms encapsulated in the format described by any sort
 To include your algorithm in the site simply add it in algorithms.py wherever necessary and place the script itself in algos directory.
 
 # Screenshots
-![index](https://user-images.githubusercontent.com/59250093/91198904-ccd68c00-e71a-11ea-8496-7ae72a0dd2fa.png)
+![index](https://user-images.githubusercontent.com/59250093/91936292-30f5e300-ed0d-11ea-9bb0-f372360d7189.png)
 
-![process](https://user-images.githubusercontent.com/59250093/91196892-53d63500-e718-11ea-87a5-36939ae8dc61.png)
+![processing](https://user-images.githubusercontent.com/59250093/91936318-36ebc400-ed0d-11ea-8108-819aa8bf97b5.png)
 
-![done](https://user-images.githubusercontent.com/59250093/91196988-70726d00-e718-11ea-9f06-1badfcc057e1.png)
+![done](https://user-images.githubusercontent.com/59250093/91936338-3eab6880-ed0d-11ea-975b-8f4a55c2ab09.png)

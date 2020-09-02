@@ -33,21 +33,4 @@ class Plotter():
         plt.ylabel("Magnitude")
         self.camera.snap()
         print(self.camera.animate(repeat=False).to_html5_video(),file=open(f'./templates/{save_file}','w+'))
-
-if __name__=="__main__":
-    test = Plotter("Insertion Sort")
-    data = list(range(1,15))
-    random.shuffle(data) #Just a random list
-
-    for i in range(len(data)):
-        temp = data[i]
-        j = i-1
-        while  j >=0 and temp < data[j]:
-            test.plot(data,j+1,j)
-            data[j+1] = data[j]
-            data[j] = temp
-            test.plot(data,j,j+1)
-            j -= 1
-        data[j+1] = temp
-
-    print(test.animate(data,'1.html'))
+        plt.close()

@@ -8,10 +8,9 @@ class CocktailSort():
         self.test.animate(self.data,filename)
     
     def cocktailSort(self,n): 
-       
         swapped = True
         
-        while (swapped == True): 
+        while swapped: 
             swapped = False
             start=0
             for i in range (start, n): 
@@ -21,7 +20,7 @@ class CocktailSort():
                     self.test.plot(self.data,i+1,i)
                     self.data[i],self.data[i+1] = self.data[i+1],self.data[i] 
                     self.test.plot(self.data,i,i+1)
-            if (swapped == False): 
+            if not swapped: 
                 break
             swapped = False
             n = n-1

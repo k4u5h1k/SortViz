@@ -25,4 +25,4 @@ def animation():
             function_names[algo](array.copy(),filenames[algo])
             chosen.append(filenames[algo])
 
-    return render_template('animation.html',fileList=chosen,rand=random.randint(0,1000))
+    return render_template('animation.html',fileList=chosen)

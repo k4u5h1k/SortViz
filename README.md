@@ -2,7 +2,7 @@
 Sorting visualizer with python, matplotlib and flask
 
 # Usage
-- If `ffmpeg --version` does not give output in the terminal, get [ffmpeg](https://www.tecmint.com/install-ffmpeg-in-linux/)
+- If `ffmpeg -version` does not give output in the terminal, get [ffmpeg](https://www.tecmint.com/install-ffmpeg-in-linux/)
 - Run python3 main.py and access the prompted url
 
 # Development

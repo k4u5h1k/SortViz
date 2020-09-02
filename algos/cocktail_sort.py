@@ -1,5 +1,4 @@
 from grapher import Plotter
-import random
 
 class CocktailSort():
     def __init__(self,data,filename):

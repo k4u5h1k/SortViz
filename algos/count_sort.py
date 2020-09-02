@@ -1,17 +1,20 @@
 from grapher import Plotter
-import random
 
-def count_sort(data, filename):
-    plotter = Plotter("Count Sort")
-    array = [0]*(max(data)+1)
-    result = []
-    plotter.plot(data,len(data)-1)
-    for element in data:
-        array[element] += 1
+class CountSort():
+    def __init__(self,data,filename):
+        self.plotter = Plotter("Count Sort")
+        self.plotter.animate(self.count_sort(data),filename)
 
-    for index, element in enumerate(array):
-        if element != 0:
-            result.append(index)
-            plotter.plot(result,len(result)-1)
+    def count_sort(self,data):
+        array = [0]*(max(data)+1)
+        result = []
+        self.plotter.plot(data,len(data)-1)
+        for element in data:
+            array[element] += 1
 
-    plotter.animate(result,filename)
+        for index, element in enumerate(array):
+            if element != 0:
+                result.append(index)
+                self.plotter.plot(result,len(result)-1)
+
+        return result

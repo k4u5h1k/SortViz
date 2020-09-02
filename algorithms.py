@@ -1,27 +1,27 @@
-from algos.insertion_sort import insertion_sort
-from algos.bubble_sort import bubble_sort
+from algos.insertion_sort import InsertionSort
+from algos.bubble_sort import BubbleSort
 from algos.quick_sort import QuickSort
 from algos.merge_sort import MergeSort
-from algos.count_sort import count_sort
+from algos.count_sort import CountSort
 from algos.cocktail_sort import CocktailSort
 from algos.comb_sort import CombSort
 from algos.heap_sort import HeapSort
-from algos.cycle_sort import cycle_sort
+from algos.cycle_sort import CycleSort
 from algos.stooge_sort import StoogeSort
 
 #DOUBLE CHECK THAT THE KEYS ARE SAME IN ALL DICTS
 
 def function_names():
     return {
-            'bubble' : bubble_sort,
+            'bubble' : BubbleSort,
             'quick' : QuickSort,
-            'insertion' : insertion_sort,
+            'insertion' : InsertionSort,
             'merge' : MergeSort,
-            'count' : count_sort,
+            'count' : CountSort,
             'cocktail' : CocktailSort,
             'comb' : CombSort,
             'heap' : HeapSort,
-            'cycle' : cycle_sort,
+            'cycle' : CycleSort,
             'stooge' : StoogeSort
             }
 

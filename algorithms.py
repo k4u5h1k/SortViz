@@ -8,9 +8,9 @@ from algos.comb_sort import CombSort
 from algos.heap_sort import HeapSort
 from algos.cycle_sort import CycleSort
 from algos.stooge_sort import StoogeSort
+from algos.gnome_sort import GnomeSort
 
 #DOUBLE CHECK THAT THE KEYS ARE SAME IN ALL DICTS
-
 def function_names():
     return {
             'bubble' : BubbleSort,
@@ -22,7 +22,8 @@ def function_names():
             'comb' : CombSort,
             'heap' : HeapSort,
             'cycle' : CycleSort,
-            'stooge' : StoogeSort
+            'stooge' : StoogeSort,
+            'gnome' : GnomeSort
             }
 
 def pretty_names():
@@ -36,7 +37,8 @@ def pretty_names():
             'comb' : 'Comb Sort',
             'heap' : 'Heap Sort',
             'cycle' : 'Cycle Sort',
-            'stooge' : 'Stooge Sort'
+            'stooge' : 'Stooge Sort',
+            'gnome' : 'Gnome Sort'
             }
 
 def filenames():
@@ -50,5 +52,6 @@ def filenames():
             'comb' : 'combsort.html',
             'heap' : 'heapsort.html',
             'cycle' : 'cyclesort.html',
-            'stooge' : 'stoogesort.html'
+            'stooge' : 'stoogesort.html',
+            'gnome' : 'gnomesort.html'
             }

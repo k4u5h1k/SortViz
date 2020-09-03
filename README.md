@@ -2,8 +2,8 @@
 Sorting visualizer with python, matplotlib and flask
 
 # Usage
-- If `ffmpeg -version` does not give output in the terminal, get [ffmpeg](https://www.tecmint.com/install-ffmpeg-in-linux/)
-- Run python3 main.py and access the prompted url
+- If `ffmpeg -version` does not give output in the terminal, get [ffmpeg](https://www.tecmint.com/install-ffmpeg-in-linux/).
+- Run python3 main.py and the site should pop up automatically.
 
 # Development
 You can add your own algorithms encapsulated in the format described by any sorting script in the algos directory.     

@@ -9,9 +9,11 @@ from algos.heap_sort import HeapSort
 from algos.cycle_sort import CycleSort
 from algos.stooge_sort import StoogeSort
 from algos.gnome_sort import GnomeSort
+from algos.selection_sort import SelectionSort
 
 #DOUBLE CHECK THAT THE KEYS ARE SAME IN ALL DICTS
-def function_names():
+
+def function_names(): # for calling from the web.py loop
     return {
             'bubble' : BubbleSort,
             'quick' : QuickSort,
@@ -23,10 +25,11 @@ def function_names():
             'heap' : HeapSort,
             'cycle' : CycleSort,
             'stooge' : StoogeSort,
-            'gnome' : GnomeSort
+            'gnome' : GnomeSort,
+            'selection' : SelectionSort
             }
 
-def pretty_names():
+def pretty_names(): # to show in the index menu checkbox options
     return {
             'bubble' :  'Bubble Sort',
             'quick' : 'Quick Sort',
@@ -38,10 +41,11 @@ def pretty_names():
             'heap' : 'Heap Sort',
             'cycle' : 'Cycle Sort',
             'stooge' : 'Stooge Sort',
-            'gnome' : 'Gnome Sort'
+            'gnome' : 'Gnome Sort',
+            'selection' : 'Selection Sort'
             }
 
-def filenames():
+def filenames(): # inside algos directory
     return {
             'bubble' : 'bubblesort.html',
             'quick' : 'quicksort.html',
@@ -53,5 +57,6 @@ def filenames():
             'heap' : 'heapsort.html',
             'cycle' : 'cyclesort.html',
             'stooge' : 'stoogesort.html',
-            'gnome' : 'gnomesort.html'
+            'gnome' : 'gnomesort.html',
+            'selection' : 'selectionsort.html'
             }

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 #Checks whether depencies are installed and installs if missing
 import sys
 import subprocess
@@ -62,6 +64,7 @@ def animation():
 def error(e):
     return render_template('error.html'),500
 
+# opens browser automatically
 def open_browser():
       webbrowser.open_new('http://127.0.0.1:5000/')
 

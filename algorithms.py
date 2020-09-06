@@ -10,6 +10,8 @@ from algos.cycle_sort import CycleSort
 from algos.stooge_sort import StoogeSort
 from algos.gnome_sort import GnomeSort
 from algos.selection_sort import SelectionSort
+from algos.pigeonhole_sort import PigeonholeSort
+from algos.pancake_sort import PancakeSort
 
 #DOUBLE CHECK THAT THE KEYS ARE SAME IN ALL DICTS
 
@@ -26,7 +28,9 @@ def function_names(): # for calling from the web.py loop
             'cycle' : CycleSort,
             'stooge' : StoogeSort,
             'gnome' : GnomeSort,
-            'selection' : SelectionSort
+            'selection' : SelectionSort,
+            'pancake' : PancakeSort,
+            'pigeonhole' : PigeonholeSort
             }
 
 def pretty_names(): # to show in the index menu checkbox options
@@ -42,7 +46,9 @@ def pretty_names(): # to show in the index menu checkbox options
             'cycle' : 'Cycle Sort',
             'stooge' : 'Stooge Sort',
             'gnome' : 'Gnome Sort',
-            'selection' : 'Selection Sort'
+            'selection' : 'Selection Sort',
+            'pancake' : 'Pancake Sort',
+            'pigeonhole' : 'Pigeonhole Sort'
             }
 
 def filenames(): # inside algos directory
@@ -58,5 +64,7 @@ def filenames(): # inside algos directory
             'cycle' : 'cyclesort.html',
             'stooge' : 'stoogesort.html',
             'gnome' : 'gnomesort.html',
-            'selection' : 'selectionsort.html'
+            'selection' : 'selectionsort.html',
+            'pancake' : 'pancakesort.html',
+            'pigeonhole' : 'pigeonholesort.html'
             }

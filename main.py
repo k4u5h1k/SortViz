@@ -22,6 +22,12 @@ except:
     print("flask not installed, installing...")
     subprocess.check_call([sys.executable, "-m", "pip", "install", "flask"])
 
+try:
+    import bjoern
+except:
+    print("matplotlib not installed, installing...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "bjoern"])
+
 #Actual app starts from here
 import os
 import algorithms
@@ -70,4 +76,5 @@ def open_browser():
 
 if __name__ == "__main__":  
     Timer(1, open_browser).start()
-    app.run(host='0.0.0.0', port=5000)
+    bjoern.run(app,'127.0.0.1',5000)
+    # app.run(host='0.0.0.0', port=5000)

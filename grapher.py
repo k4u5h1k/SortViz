@@ -1,5 +1,7 @@
 import matplotlib
 matplotlib.use('agg')
+import os
+import sys
 import random
 import matplotlib.pyplot as plt
 from celluloid import Camera
@@ -25,12 +27,12 @@ class Plotter():
         plt.ylabel("Magnitude")
         self.camera.snap()
 
-    def animate(self, data, save_file):
+    def animate(self, data, save_file, interval=200):
         colours = list('g'*len(data))
         plt.bar(list(range(len(data))), data, color=colours)
         plt.title(self.title)
         plt.xlabel("Index")
         plt.ylabel("Magnitude")
         self.camera.snap()
-        print(self.camera.animate(repeat=False).to_html5_video(),file=open(f'./templates/{save_file}','w+'))
+        print(self.camera.animate(repeat=False,interval=interval).to_html5_video(),file=open(os.path.join(sys.path[0],'templates',save_file),'w+'))
         plt.close()

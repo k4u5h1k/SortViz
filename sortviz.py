@@ -33,7 +33,7 @@ import os
 import algorithms
 import webbrowser
 from random import shuffle
-from threading import Timer
+# from threading import Timer
 from flask import Flask, render_template, request, redirect, url_for
 
 #Suppresses all the flask clutter in terminal
@@ -47,13 +47,14 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/',methods=['GET'])
 def sortviz():
-    return render_template('index.html',names = algorithms.pretty_names())
+    random_array = list(range(1,11))
+    shuffle(random_array)
+    return render_template('index.html',names = algorithms.pretty_names(),array=" ".join(list(map(str,random_array))))
 
 
 @app.route('/animation',methods=['POST'])
 def animation():
-    array = list(range(1,int(request.form.get('size'))+1))
-    shuffle(array)
+    array = list(map(int,request.form.get('array').strip().split()))
 
     function_names = algorithms.function_names()
     filenames = algorithms.filenames()
@@ -75,6 +76,6 @@ def open_browser():
       webbrowser.open_new('http://127.0.0.1:5000/')
 
 if __name__ == "__main__":  
-    Timer(1, open_browser).start()
-    bjoern.run(app,'127.0.0.1',5000)
+    # Timer(1, open_browser).start()
+    bjoern.run(app,'0.0.0.0',5000)
     # app.run(host='0.0.0.0', port=5000)

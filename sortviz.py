@@ -3,6 +3,7 @@
 #Checks whether depencies are installed and installs if missing
 import sys
 import subprocess
+import glob
 
 try:
     import matplotlib
@@ -79,3 +80,6 @@ if __name__ == "__main__":
     # Timer(1, open_browser).start()
     bjoern.run(app,'0.0.0.0',5000)
     # app.run(host='0.0.0.0', port=5000)
+    toremove = glob.glob(os.path.join(sys.path[0],'templates','*sort.html'))
+    for _file in toremove:
+        os.remove(_file)

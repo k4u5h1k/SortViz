@@ -1,5 +1,5 @@
 # SortViz
-Sorting visualizer with python, matplotlib and flask. Hosted [here](http://kaushik.me/sortviz)
+Sorting visualizer with matplotlib and flask. Hosted [here](http://kaushik.me/sortviz)
 
 # Usage
 - If `ffmpeg -version` does not give output in the terminal, get [ffmpeg](https://www.tecmint.com/install-ffmpeg-in-linux/).
